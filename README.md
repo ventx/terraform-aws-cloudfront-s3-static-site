@@ -28,7 +28,7 @@ After creating the resources, you have to place your content in your bucket ... 
 - `root_domain_name` 
     >Root domain name for the site
 
-- `aws_region` - 
+- `region` 
     >AWS region to use for the resources
 
 - `index_document` 

@@ -9,7 +9,7 @@ variable "profile" {
 }
 
 // AWS region to use
-variable "aws_region" {
+variable "region" {
   description = "Region to use"
 }
 
