@@ -22,6 +22,9 @@ After creating the resources, you have to place your content in your bucket ... 
 - `create_hosted_zone` 
     >Optional: If set to 'true' the named root domain will be created. Defaults to 'false'
 
+- `profile`
+    >Profile which to use for creation of resources
+    
 - `root_domain_name` 
     >Root domain name for the site
 
