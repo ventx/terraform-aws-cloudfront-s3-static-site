@@ -72,18 +72,24 @@ After creating the resources, you have to place your content in your bucket ... 
 ## Example Usage
 
 ```
-
+module "static_site" {
+  source = "github.com/JohannGelhorn/terraform-aws-cloudfront-s3-static-site.git"
+  site_name = "staticsite.testdomain.com"
+  root_domain_name = "testdomain.com"
+  region = "eu-central-1"
+  profile = "default"
+}
 
 
 resource "aws_s3_bucket_object" "index_file" {
-  bucket = "${module.site_bucket.bucket_name}"
+  bucket = "${module.static_site.bucket_name}"
   key = "index.html"
   source = "/path/to/index.html"
   content_type = "text/html"
 }
 
 resource "aws_s3_bucket_object" "error_file" {
-  bucket = "${module.site_bucket.bucket_name}"
+  bucket = "${module.static_site.bucket_name}"
   key = "404.html"
   source = "/path/to/404.html"
   content_type = "text/html"
