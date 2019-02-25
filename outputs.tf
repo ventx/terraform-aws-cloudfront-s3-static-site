@@ -45,4 +45,3 @@ output "site_certificate_arn" {
 output "site_url" {
   value = "${aws_route53_record.dnsrecord.fqdn}"
 }
-
