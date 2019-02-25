@@ -38,7 +38,7 @@ After creating the resources, you have to place your content in your bucket ... 
     >Optional: Name of the error file. Defaults to *404.html*
     
 - `is_ipv6_enabled`
-    >Optional> State of IPv6 for Cloudfront. Defaults to 'true'
+    >Optional: State of IPv6 for Cloudfront. Defaults to 'true'
 
 
 ## Attribute Reference
