@@ -9,7 +9,7 @@ Create a static website with S3 bucket as origin and deliver it with a Cloudfron
 - The certificate and the validation will be made in 'us-east-1' because no other region is currently possible.
 - All the arguments with default values are optional
 
-After creating the resources, you have to place your content in your bucket ... that's it.
+After creating the resource, you have to place your content in your bucket ... that's it.
 
 
 
@@ -73,13 +73,15 @@ After creating the resources, you have to place your content in your bucket ... 
 ## Example Usage
 
 ```
+// Create your static site with given arguments
 module "static_site" {
-  source = "github.com/JohannGelhorn/terraform-aws-cloudfront-s3-static-site.git"
+  source = "github.com/ventx/terraform-aws-cloudfront-s3-static-site.git"
   site_name = "staticsite.testdomain.com"
   root_domain_name = "testdomain.com"
 }
 
 
+// Upload your index.html and 404.html to your S3 Bucket
 resource "aws_s3_bucket_object" "index_file" {
   bucket = "${module.static_site.bucket_name}"
   key = "index.html"
@@ -93,3 +95,4 @@ resource "aws_s3_bucket_object" "error_file" {
   source = "/path/to/404.html"
   content_type = "text/html"
 ```
+

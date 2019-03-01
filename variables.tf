@@ -47,3 +47,4 @@ variable "cdn_max_ttl" {
   description = "Max TTL for Cloudfront distribution"
   default = "86400"
 }
+
