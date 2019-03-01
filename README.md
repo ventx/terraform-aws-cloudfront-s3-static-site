@@ -21,15 +21,9 @@ After creating the resources, you have to place your content in your bucket ... 
 
 - `create_hosted_zone` 
     >Optional: If set to 'true' the named root domain will be created. Defaults to 'false'
-
-- `profile`
-    >Profile which to use for creation of resources
     
 - `root_domain_name` 
     >Root domain name for the site
-
-- `region` 
-    >AWS region to use for the resources
 
 - `index_document` 
     >Optional: Name of the index file. Defaults to *index.html*
@@ -39,7 +33,15 @@ After creating the resources, you have to place your content in your bucket ... 
     
 - `is_ipv6_enabled`
     >Optional: State of IPv6 for Cloudfront. Defaults to 'true'
+    
+- `cdn_min-ttl`
+    >Optional: Min TTL for Cloudfront distribution. Defaults to '0'
+    
+- `cdn_default_ttl`
+    >Optional: Default TTL for Cloudfront distribution. Defaults to '1000'   
 
+- `cdn_max_ttl`
+    >Optional: Max TTL for Cloudfront distribution. Defaults to '86400'
 
 ## Attribute Reference
 
@@ -51,9 +53,6 @@ After creating the resources, you have to place your content in your bucket ... 
 
 - `bucket_name` 
     >Name of the S3 Bucket
-
-- `profile` 
-    >which is used to create the resources
 
 - `site_cdn_arn` 
     >ARN of the cloudfront distribution
