@@ -45,3 +45,5 @@ output "site_certificate_arn" {
 output "site_url" {
   value = "${aws_route53_record.dnsrecord.fqdn}"
 }
+
+// TODO check if the IPv6 address of ccloufront would be useful as output
