@@ -1,9 +1,3 @@
-provider "aws" {
-  region  = "${var.region}"
-  profile = "${var.profile}"
-}
-
-// TODO remove provider and profile section, because it should be  called from local main.tf, not from within the module
 
 data "aws_caller_identity" "current" {}
 

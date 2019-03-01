@@ -1,8 +1,3 @@
-// The used profile for connection
-output "profile" {
-  value = "${var.profile}"
-}
-
 // bucket name
 output "bucket_name" {
   value = "${aws_s3_bucket.site_bucket.bucket}"
@@ -46,4 +41,3 @@ output "site_url" {
   value = "${aws_route53_record.dnsrecord.fqdn}"
 }
 
-// TODO check if the IPv6 address of ccloufront would be useful as output

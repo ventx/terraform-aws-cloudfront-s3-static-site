@@ -3,16 +3,6 @@ variable "site_name" {
   description = "Domain name for the new website"
 }
 
-// Profile to use for the AWS connection
-variable "profile" {
-  description = "Profile to use for AWS connection"
-}
-
-// AWS region to use
-variable "region" {
-  description = "Region to use"
-}
-
 // create hsoted zone or use existing
 variable "create_hosted_zone" {
   description = "set 'true' for creating a new hosted zone, set 'false' to use existing"
