@@ -115,9 +115,9 @@ resource "aws_cloudfront_distribution" "site_distribution" {
 
     viewer_protocol_policy = "redirect-to-https"
     compress               = true
-    min_ttl                = 0
-    default_ttl            = 1000
-    max_ttl                = 86400
+    min_ttl                = "${var.cdn_min_ttl}"
+    default_ttl            = "${var.cdn_default_ttl}"
+    max_ttl                = "${var.cdn_max_ttl}"
   }
 
   restrictions {

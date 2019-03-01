@@ -31,3 +31,19 @@ variable "is_ipv6_enabled" {
   default     = "true"
   description = "State of CloudFront IPv6"
 }
+
+// TTL's for Cloudfront distribution
+variable "cdn_min_ttl" {
+  description = "Min TTL for Cloudfront distribution"
+  default = "0"
+}
+
+variable "cdn_default_ttl" {
+  description = "Default TTL for Cloudfront distribution"
+  default = "1000"
+}
+
+variable "cdn_max_ttl" {
+  description = "Max TTL for Cloudfront distribution"
+  default = "86400"
+}
