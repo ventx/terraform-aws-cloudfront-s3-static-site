@@ -77,8 +77,6 @@ module "static_site" {
   source = "github.com/JohannGelhorn/terraform-aws-cloudfront-s3-static-site.git"
   site_name = "staticsite.testdomain.com"
   root_domain_name = "testdomain.com"
-  region = "eu-central-1"
-  profile = "default"
 }
 
 
